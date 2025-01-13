@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+
+    <!-- Font Awesome for icons -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="main.js" defer></script>
+</head>
+<body onload="time()">
+    <div class="todo-container">
+        <!-- Date and Time Display -->
+        <div class="date-hour">
+            <p class="date" id="date">Date</p>
+            <p class="hour" id="hour">Hour</p>
+        </div>
+
+        <!-- App Header -->
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+
+        <!-- Add New Task Form -->
+        <form action="" id="todo-form" aria-labelledby="todo-form">
+            <p>Add Your Task Here</p>
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="Type here about your next task" 
+                    required
+                    aria-label="Enter task"
+                >
+                <button type="submit" aria-label="Add task">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Edit Task Form -->
+        <form action="" id="edit-form" class="hide" aria-labelledby="edit-form">
+            <p>Edit Your Task</p>
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    id="edit-input" 
+                    placeholder="Edit your task" 
+                    required
+                    aria-label="Edit task"
+                >
+                <button type="submit" aria-label="Submit edited task">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button type="button" id="cancel-edit-btn" aria-label="Cancel edit">Cancel</button>
+        </form>
+
+        <!-- Task List -->
+        <div class="todo-list" id="todo-list">
+            <!-- Dynamically added tasks will go here -->
+        </div>
+
+        <!-- Clear All Button -->
+        <button id="clear-all-btn" class="clear-all-btn" aria-label="Clear all tasks">Clear All</button>
+    </div>
+</body>
+</html>
